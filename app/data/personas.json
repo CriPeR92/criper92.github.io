@@ -1,0 +1,35 @@
+[
+    {
+        "id1": "0",
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "username": "juan.perez",
+        "telefono": "098225468",
+        "direccion": "Casi",
+        "email": "juan.perez@",
+        "fecha": "21-08-09"
+
+    },
+    {
+        "id1": "1",
+        "nombre": "Christian",
+        "apellido": "Perez",
+        "username": "juan.perez",
+        "telefono": "098225468",
+        "direccion": "Casi",
+        "email": "juan.perez@",
+        "fecha": "21-08-09"
+
+    },
+    {
+        "id1": "2",
+        "nombre": "Pedro",
+        "apellido": "Perez",
+        "username": "juan.perez",
+        "telefono": "098225468",
+        "direccion": "Casi",
+        "email": "juan.perez@",
+        "fecha": "21-08-09"
+
+    }
+]
