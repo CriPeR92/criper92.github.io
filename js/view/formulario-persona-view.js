@@ -86,21 +86,20 @@ var FormularioPersonaView = Backbone.View.extend({
         if (flag == 0 && flagmail == 0){
           var model = new PersonaModel(data);
 
-          model.save({
-            dataType : 'text',
-            success: function(model, response) {
-                alert("Se creo correctamente!");
-                window.location.reload();
-            },
-            error: function(model, response) {
-                alert("Ha ocurrido un error!");
-                window.location.reload();
-            }
-        });
+          model.save({}, {
+              success: function (model, respose, options) {
+                  alert("Se creo el usuario correctamente");
+                  window.location.reload();
+              },
+              error: function (model, xhr, options) {
+                  alert("Ocurrio un error al crear el usuario");
+                  window.location.reload();
+              }
+          });
         }
 
-        alert("Se creo correctamente el usuario!");
-        window.location.reload();
+        //alert("Se creo correctamente el usuario!");
+        //window.location.reload();
     },
 
 });
