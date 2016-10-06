@@ -59,6 +59,7 @@ var ListaPersonaView = Backbone.View.extend({
         this.$el.html(tmpl({
             collection: coll
         }));
+
         return this;
     },
 
@@ -196,19 +197,19 @@ var ListaPersonaView = Backbone.View.extend({
         direccion = document.getElementById(id+"direccion");
         email = document.getElementById(id+"email");
 
-        var book1 = new PersonaModel({ id });
-        book1.fetch({
-        success: function (bookResponse) {
-        console.log("Found the book: " + bookResponse.get("nombre"));
+        var a_editar = new PersonaModel({ id });
+        a_editar.fetch({
+        success: function (modifResponse) {
+        console.log("Usuario encontrado: " + modifResponse.get("nombre"));
         // Let us update this retreived book now (doing it in the callback) [UPDATE]
-        bookResponse.set("nombre", nombre.value);
-        bookResponse.set("apellido", apellido.value);
-        bookResponse.set("alias", alias.value);
-        bookResponse.set("telefono", telefono.value);
-        bookResponse.set("direccion", direccion.value);
-        bookResponse.set("email", email.value);
+        modifResponse.set("nombre", nombre.value);
+        modifResponse.set("apellido", apellido.value);
+        modifResponse.set("alias", alias.value);
+        modifResponse.set("telefono", telefono.value);
+        modifResponse.set("direccion", direccion.value);
+        modifResponse.set("email", email.value);
 
-        bookResponse.save({}, {
+        modifResponse.save({}, {
             success: function (model, respose, options) {
                 alert("Se modifico el usuario correctamente");
                 window.location.reload();
